@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youcef Cherbal | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- NAV FLOTANTE -->
+  <nav class="topnav">
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#extra">Más cosas</a>
+    <a href="#contacto">Contacto</a>
+    <button id="theme-toggle" aria-label="Cambiar tema">
+      <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="badge">Disponible para proyectos ✦</span>
+      <h1>Youcef<br><span class="accent">Cherbal</span></h1>
+      <p class="subtitle">16 años · Estudiante de informática · España</p>
+      <div class="hero-tags">
+        <span><i class="fab fa-python"></i> Python</span>
+        <span><i class="fab fa-js"></i> JavaScript</span>
+        <span><i class="fab fa-html5"></i> HTML & CSS</span>
+        <span><i class="fas fa-film"></i> Adobe Premiere</span>
+      </div>
+      <a href="#proyectos" class="btn-hero">Ver proyectos <i class="fas fa-arrow-down"></i></a>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </header>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="reveal">
+    <div class="section-label">01 — Sobre mí</div>
+    <h2>Hola, soy Youcef <span class="wave">👋</span></h2>
+    <p>
+      Soy estudiante de la ESO con 16 años y vivo en España. Me apasiona la programación,
+      especialmente <strong>JavaScript</strong> y <strong>Python</strong>, mis lenguajes favoritos.
+      También me gusta la edición de vídeo con <strong>Adobe Premiere Pro</strong>.
+      Siempre estoy aprendiendo algo nuevo y buscando llevar mis proyectos al siguiente nivel.
+    </p>
+    <div class="about-stats">
+      <div class="stat">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Proyectos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Lenguajes favoritos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">16</span>
+        <span class="stat-label">Años</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="reveal">
+    <div class="section-label">02 — Habilidades</div>
+    <h2>Qué sé hacer</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <i class="fab fa-python"></i>
+        <span>Python</span>
+        <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+      </div>
+      <div class="skill-item">
+        <i class="fab fa-js"></i>
+        <span>JavaScript</span>
+        <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+      </div>
+      <div class="skill-item">
+        <i class="fab fa-html5"></i>
+        <span>HTML & CSS</span>
+        <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+      </div>
+      <div class="skill-item">
+        <i class="fab fa-node-js"></i>
+        <span>Node.js</span>
+        <div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-film"></i>
+        <span>Adobe Premiere</span>
+        <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+      </div>
+      <div class="skill-item">
+        <i class="fab fa-git-alt"></i>
+        <span>Git & GitHub</span>
+        <div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="reveal">
+    <div class="section-label">03 — Proyectos</div>
+    <h2>Mis proyectos</h2>
+    <div class="projects-container">
+      <div class="project-card reveal-card">
+        <div class="card-num">01</div>
+        <div class="card-icon"><i class="fab fa-discord"></i></div>
+        <h3>Bot de Discord</h3>
+        <p>Bot hecho en JavaScript con comandos básicos, gestión de roles y mensaje de bienvenida automatizado.</p>
+        <p class="tech"><i class="fas fa-code"></i> JavaScript · Node.js · Discord.js</p>
+        <a class="btn" href="https://github.com/lleagy/bot-discord" target="_blank">
+          <i class="fab fa-github"></i> Ver proyecto
+        </a>
+      </div>
+      <div class="project-card reveal-card">
+        <div class="card-num">02</div>
+        <div class="card-icon"><i class="fas fa-globe"></i></div>
+        <h3>Web personal</h3>
+        <p>Portfolio personal hecho en HTML, CSS y JS, con animaciones suaves, modo oscuro y diseño responsivo.</p>
+        <p class="tech"><i class="fas fa-code"></i> HTML · CSS · JavaScript</p>
+        <a class="btn" href="https://lleagy.github.io/mi-web" target="_blank">
+          <i class="fas fa-external-link-alt"></i> Ver proyecto
+        </a>
+      </div>
+      <div class="project-card reveal-card">
+        <div class="card-num">03</div>
+        <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+        <h3>Juego simple</h3>
+        <p>Mini juego de navegador hecho con JavaScript puro para practicar lógica, eventos y DOM manipulation.</p>
+        <p class="tech"><i class="fas fa-code"></i> JavaScript · HTML · CSS</p>
+        <a class="btn" href="https://lleagy.github.io/juego" target="_blank">
+          <i class="fas fa-external-link-alt"></i> Ver proyecto
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="reveal">
+    <div class="section-label">04 — Contacto</div>
+    <h2>¿Hablamos?</h2>
+    <p>Estoy abierto a proyectos, colaboraciones o simplemente charlar de tecnología.</p>
+    <div class="contact-btns">
+      <a class="btn" href="https://mail.google.com/mail/?view=cm&to=yocefche@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i> Enviar Email
+      </a>
+      <a class="btn secondary" href="https://github.com/lleagy" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <button class="btn discord-btn" id="discord-copy">
+        <i class="fab fa-discord"></i> Discord
+      </button>
+    </div>
+    <div class="toast" id="toast">
+      <i class="fas fa-check-circle"></i> ¡Usuario copiado: <strong>lleagy</strong>!
+    </div>
+  </section>
+
+  <!-- SECCIÓN EXTRA — ROBOT 3D -->
+  <section id="extra" class="reveal extra-section">
+    <div class="section-label">05 — Más cosas</div>
+    <h2>También hago esto <span class="wave">🤖</span></h2>
+    <p>Además de programar, me gusta explorar herramientas creativas como Spline para crear experiencias 3D interactivas. Este robot te sigue con el ratón.</p>
+    <div class="spline-wrapper" id="spline-wrapper">
+      <div class="spline-placeholder" id="spline-placeholder">
+        <i class="fas fa-cube"></i>
+        <span>Cargando modelo 3D...</span>
+      </div>
+    </div>
+    <div class="extra-tags">
+      <span><i class="fas fa-cube"></i> Diseño 3D</span>
+      <span><i class="fas fa-film"></i> Edición de vídeo</span>
+      <span><i class="fas fa-paint-brush"></i> Diseño creativo</span>
+      <span><i class="fas fa-robot"></i> Experimentos interactivos</span>
+    </div>
+  </section>
+
+  <!-- YOUTUBE CTA -->
+  <section id="youtube" class="reveal yt-section">
+    <div class="yt-inner">
+      <i class="fab fa-youtube yt-icon"></i>
+      <h2>Mi canal de YouTube</h2>
+      <p>Sígame en YouTube donde subo contenido de tecnología, programación y más.</p>
+      <a class="btn-yt" href="https://youtube.com/@lleagy?si=kctlII8wQ74SmaVO" target="_blank">
+        <i class="fab fa-youtube"></i> Visitar canal
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Hecho con <i class="fas fa-heart" style="color:#ef4444"></i> por Youcef Cherbal · 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
