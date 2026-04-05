@@ -172,23 +172,36 @@
   </section>
 
   <!-- SECCIÓN EXTRA — ROBOT 3D -->
-  <section id="extra" class="reveal extra-section">
-    <div class="section-label">05 — Más cosas</div>
-    <h2>También hago esto <span class="wave">🤖</span></h2>
-    <p>Además de programar, me gusta explorar herramientas creativas como Spline para crear experiencias 3D interactivas. Este robot te sigue con el ratón.</p>
-    <div class="spline-wrapper" id="spline-wrapper">
+<section id="extra" class="reveal extra-section">
+  <div class="section-label">05 — Más cosas</div>
+  <h2>También hago esto <span class="wave">🤖</span></h2>
+  <p>Además de programar, me gusta explorar herramientas creativas como Spline para crear experiencias 3D interactivas. Este robot te sigue con el ratón.</p>
+  
+  <div class="spline-reveal-container">
+    <div class="spline-blur-overlay" id="spline-overlay">
+      <div class="spline-blur-inner" id="spline-blur-preview"></div>
+      <button class="btn-reveal-spline" id="spline-toggle-btn">
+        <i class="fas fa-eye"></i> Ver modelo 3D
+      </button>
+    </div>
+    <div class="spline-wrapper" id="spline-wrapper" style="display:none;">
       <div class="spline-placeholder" id="spline-placeholder">
         <i class="fas fa-cube"></i>
         <span>Cargando modelo 3D...</span>
       </div>
     </div>
-    <div class="extra-tags">
-      <span><i class="fas fa-cube"></i> Diseño 3D</span>
-      <span><i class="fas fa-film"></i> Edición de vídeo</span>
-      <span><i class="fas fa-paint-brush"></i> Diseño creativo</span>
-      <span><i class="fas fa-robot"></i> Experimentos interactivos</span>
-    </div>
-  </section>
+    <button class="btn-hide-spline" id="spline-hide-btn" style="display:none;">
+      <i class="fas fa-eye-slash"></i> Ocultar
+    </button>
+  </div>
+
+  <div class="extra-tags">
+    <span><i class="fas fa-cube"></i> Diseño 3D</span>
+    <span><i class="fas fa-film"></i> Edición de vídeo</span>
+    <span><i class="fas fa-paint-brush"></i> Diseño creativo</span>
+    <span><i class="fas fa-robot"></i> Experimentos interactivos</span>
+  </div>
+</section>
 
   <!-- YOUTUBE CTA -->
   <section id="youtube" class="reveal yt-section">
