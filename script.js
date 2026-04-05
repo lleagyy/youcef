@@ -120,48 +120,40 @@ if (discordBtn) {
     });
   });
 }
-
-// ===== LAZY LOAD SPLINE =====
+// ---------- spline -------------
 const splineWrapper = document.getElementById('spline-wrapper');
-if (splineWrapper) {
-  const splineObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Cargar script de Spline solo cuando sea visible
-        const script = document.createElement('script');
-        script.type = 'module';
-        script.src = 'https://unpkg.com/@splinetool/viewer@1.12.58/build/spline-viewer.js';
-        script.onload = () => {
-          const placeholder = document.getElementById('spline-placeholder');
-          const viewer = document.createElement('spline-viewer');
-          viewer.setAttribute('url', 'https://prod.spline.design/eKzfteJzDmvuy2XU/scene.splinecode');
-          if (placeholder) placeholder.remove();
-          splineWrapper.appendChild(viewer);
-          const hint = document.createElement('div');
-          hint.className = 'spline-hint';
-          hint.innerHTML = '<i class="fas fa-mouse-pointer"></i> Mueve el ratón por aquí';
-          splineWrapper.appendChild(hint);
-        };
-        document.head.appendChild(script);
-        splineObserver.disconnect();
-      }
-    });
-  }, { threshold: 0.1 });
-  splineObserver.observe(splineWrapper);
-}
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.topnav a[href^="#"]');
+const splineOverlay = document.getElementById('spline-overlay');
+const splineToggleBtn = document.getElementById('spline-toggle-btn');
+const splineHideBtn = document.getElementById('spline-hide-btn');
+let splineLoaded = false;
 
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const top = section.offsetTop - 120;
-    if (window.scrollY >= top) current = section.getAttribute('id');
+if (splineToggleBtn) {
+  splineToggleBtn.addEventListener('click', () => {
+    splineOverlay.style.display = 'none';
+    splineWrapper.style.display = 'block';
+    splineHideBtn.style.display = 'flex';
+
+    if (!splineLoaded) {
+      splineLoaded = true;
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = 'https://unpkg.com/@splinetool/viewer@1.12.58/build/spline-viewer.js';
+      script.onload = () => {
+        const placeholder = document.getElementById('spline-placeholder');
+        const viewer = document.createElement('spline-viewer');
+        viewer.setAttribute('url', 'https://prod.spline.design/eKzfteJzDmvuy2XU/scene.splinecode');
+        if (placeholder) placeholder.remove();
+        splineWrapper.appendChild(viewer);
+      };
+      document.head.appendChild(script);
+    }
   });
-  navLinks.forEach(link => {
-    link.style.background = link.getAttribute('href') === `#${current}` 
-      ? 'var(--border)' : '';
-    link.style.color = link.getAttribute('href') === `#${current}` 
-      ? 'var(--text)' : '';
+}
+
+if (splineHideBtn) {
+  splineHideBtn.addEventListener('click', () => {
+    splineWrapper.style.display = 'none';
+    splineHideBtn.style.display = 'none';
+    splineOverlay.style.display = 'flex';
   });
-}, { passive: true });
+}
